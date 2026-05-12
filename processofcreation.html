@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Process of Creation- Snapsis</title>
+     <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  <style>
+    /* Global Styles */
+    body {
+      margin: 0;
+      font-family: 'Nunito', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    /* Container */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    /* Page Title */
+    h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 3rem;
+      margin-bottom: 50px;
+      color: #2c3e50;
+    }
+
+    /* Steps Grid */
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      justify-items: center;
+      align-items: stretch;
+    }
+
+    /* Step Box */
+    .step-box {
+      background-color: #ffffff;
+      border-radius: 15px;
+      padding: 30px 20px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      width: 92%;
+      max-width: 300px;
+    }
+
+    .step-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+    }
+
+
+    /* Step Title */
+    .step-title {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 15px;
+      color: #2c3e50;
+    }
+
+  </style>
+</head>
+<body>
+
+   <!-- Navbar -->
+  <nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="theneed.html">The Need</a>
+    <a href="impact.html">Impact</a>
+    <a href="promotionalvideo.html">Promotional Video</a>
+    <a href="howitworks.html">How It Works</a>
+    <a href="processofcreation.html">Process of Creation</a>
+    <a href="ourcode.html">Our Code</a>
+    <a href="research.html">Research</a>
+
+  </nav>
+
+
+    <!-- HEADER -->
+    <header class="page-header">
+        <h1>Process of Creation</h1>
+        <p>Behind the scenes of building Snapsis</p>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <div class="container">
+
+        <!-- INTRO BOX -->
+        <section class="card">
+            <h2>Our Journey</h2>
+            <p>
+                Throughout this project, our team collaborated, tested ideas, and worked through
+                challenges to bring Snapsis to life. Below are moments captured during our development process.
+            </p>
+        </section>
+
+        
+            <div class="carousel">
+  <img src="./images/IMG_0127.JPG" class="active">
+  <img src="./images/IMG_0084.JPG">
+  <img src="./images/IMG_0083.JPG">
+  <img src="./images/IMG_0082.JPG">
+  <img src="./images/IMG_0122.JPG"> 
+  <img src="./images/IMG_0161 (1).JPG"> 
+  <img src="./images/IMG_0129 (1).JPG"> 
+
+
+
+
+  <button class="left">&#8592;</button>
+  <button class="right">&#8594;</button>
+</div>
+
+<script>
+  const images = document.querySelectorAll('.carousel img');
+  const leftBtn = document.querySelector('.left');
+  const rightBtn = document.querySelector('.right');
+
+  let index = 0;
+
+  function showImage(i) {
+    images.forEach(img => img.classList.remove('active'));
+    images[i].classList.add('active');
+  }
+
+  rightBtn.addEventListener('click', () => {
+    index = (index + 1) % images.length;
+    showImage(index);
+  });
+
+  leftBtn.addEventListener('click', () => {
+    index = (index - 1 + images.length) % images.length;
+    showImage(index);
+  });
+</script>
+
+        </section>
+        
+
+  
+
+</body>
+</html>
